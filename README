@@ -1,0 +1,67 @@
+                                  TXTDT
+
+Simple program to read the DVD Video Manager Text Data or VMG_TXTDT_MG. This is a very 
+old project. Tt was coded when I was contemplating writing my own FOSS DVD authoring 
+software. Since it was to be GPLed it could not use any proprietary info. The 
+TXTDT structure therefore had to be reverse engineered from scratch looking at the 
+IFO file in a hex editor. I posted my program and my findings on the net so other projects
+could use it but I thought  I would  gather it here for prosperity. NOTE: This is 
+early alpha type software and  don't blame me for buffer problems, memory leaks etc.. 
+
+It's simple to use just compile and then run txtdt -n VIDEO_TS.IFO and the txt data
+will be like extracted like this:
+
+
+dyna@bamse:~/Development/DVD/txtdt.init$ ./txtdt -n ../VIDEO_TS.IFO.2 
+
+Company / Disk ID: DVDDEM
+Number of TXTDT_LU: 1
+Endbyte of TXTDT_MG: 08f24028
+
+Language Code for TXTDT_LU number 1 is: en
+The Character set of the txtit is: ISO 646 - ASCII
+Start byte of TXTDT_LU is: 0000001c
+
+TXTDT_LU
+Endbyte of TXTDT_LU is: 0000217d
+
+TXT Information from IT_TXT_SRP_SA table
+Volume:
+        Name: DVD Demystified 2.0
+        Title: 
+                Name: DVD Disc of All Trades
+        Title: 
+                Name: Motion Menu Tutorial
+        Title: 
+                Name: New York Minute
+        Title: 
+                Name: Telescope Mirror Lab
+        Title: 
+                Name: The Last Supper
+        Title: 
+                Name: Return to Kelseyville
+TXT Information from IT_TXT_SRP table
+Volume:
+        Name: DVD Demystified 2.0
+        General_Category: Omnibus
+        Copyrigh: Copyright 2001 McGraw-Hill
+        Authoring_Information: Mark Johnson, Ari Zagnit
+        Title: 
+                Name: DVD Disc of All Trades
+                Chapter: 
+                        Name: Introduction
+                Chapter: 
+                        Name: DVD and Convergence
+                Chapter: 
+                        Name: What is DVD?
+                Chapter: 
+                        Name: DVD Formats
+                Chapter: 
+                        Name: DVD-ROM
+                Chapter: 
+                        Name: DVD-Audio
+                Chapter: 
+
+And so on.. 
+
+
